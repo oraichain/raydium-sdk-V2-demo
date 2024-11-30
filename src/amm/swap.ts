@@ -10,7 +10,7 @@ export const swap = async () => {
   const raydium = await initSdk()
   const amountIn = 500
   const inputMint = NATIVE_MINT.toBase58()
-  const poolId = '58oQChx4yWmvKdwLLZzBi4ChoCc2fqCUWBkwMihLYQo2' // SOL-USDC pool
+  const poolId = 'CGNJAMpqtUEWuwNz8oyz6FBLvjwK7AGRPmjyj7T3AhMs' // SOL-USDC pool
 
   let poolInfo: ApiV3PoolInfoStandardItem | undefined
   let poolKeys: AmmV4Keys | undefined
