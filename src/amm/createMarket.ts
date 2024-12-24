@@ -9,10 +9,12 @@ export const createMarket = async () => {
 
   const { execute, extInfo, transactions } = await raydium.marketV2.create({
     baseInfo: {
+      // create market doesn't support token 2022
       mint: RAYMint,
       decimals: 6,
     },
     quoteInfo: {
+      // create market doesn't support token 2022
       mint: USDCMint,
       decimals: 9,
     },
@@ -49,6 +51,9 @@ export const createMarket = async () => {
     sequentially: true,
   })
 
+  console.log(
+    'note: create market does not support token 2022, if you need more detail error info, set txVersion to TxVersion.LEGACY'
+  )
   console.log('create market txIds:', txIds)
   process.exit() // if you don't want to end up node execution, comment this line
 }
